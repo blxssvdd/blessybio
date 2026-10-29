@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/gallery/favicon.png">
+  <title>blessy!! • Python Developer & Architecture</title>
+  <meta name="description" content="Portfolio of blessy!! — Python Developer. Telegram bots, FastAPI, Django, high-performance backends." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="brand-symbol">✦</span>
+        <span>blessy!!</span>
+        <span class="brand-badge">Python</span>
+      </a>
+
+      <button class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="nav-link active" href="index.html">✦ Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projects.html">Projects</a></li>
+        <li><a class="nav-link" href="songs.html">Fav. Songs</a></li>
+        <li><a class="nav-link" href="gallery.html">Photos</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="nav-status">
+          <span class="pulse-dot"></span>
+          <span>Available</span>
+        </div>
+        <a href="https://github.com/blxssvdd" target="_blank" rel="noopener" class="ha-outline" style="padding: 6px 12px; font-size: 0.85rem;">
+          <span class="ha-outline-icon"><i class="fa-brands fa-github"></i></span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="pulse-dot"></span>
+            <span>Python Developer • Backend & Bots</span>
+          </div>
+
+          <h1 class="hero-title">
+            All the code in the world, with <span class="accent">zero compromises.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Crafting high-throughput Telegram & Discord bots, resilient FastAPI backends, and elegant digital utilities with relentless attention to speed and detail.
+          </p>
+
+          <div class="hero-actions">
+            <!-- Split Action Button -->
+            <div class="ha-split">
+              <a href="projects.html" class="ha-main">
+                <span>Explore Projects</span>
+              </a>
+              <span class="ha-divider" aria-hidden="true"></span>
+              <button type="button" class="ha-caret" aria-label="Select platform link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="12" height="12">
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,48,88H208a8,8,0,0,1,5.66,13.66Z"></path>
+                </svg>
+              </button>
+              <div class="ha-menu">
+                <a href="https://t.me/BirthdayCountdownBot_bot" target="_blank" rel="noopener" class="ha-menu-item">
+                  <i class="fa-brands fa-telegram"></i> Birthday Bot
+                </a>
+                <a href="https://discord.com/oauth2/authorize?client_id=1094355452797669436" target="_blank" rel="noopener" class="ha-menu-item">
+                  <i class="fa-brands fa-discord"></i> Sukuna Bot
+                </a>
+                <a href="https://github.com/blxssvdd/Tournaments-Manager-API" target="_blank" rel="noopener" class="ha-menu-item">
+                  <i class="fa-solid fa-code"></i> FastAPI API
+                </a>
+                <a href="https://t.me/blessysaver_bot" target="_blank" rel="noopener" class="ha-menu-item">
+                  <i class="fa-solid fa-download"></i> BlessySaver Bot
+                </a>
+              </div>
+            </div>
+
+            <!-- Outline buttons -->
+            <a href="https://github.com/blxssvdd" target="_blank" rel="noopener" class="ha-outline">
+              <span class="ha-outline-icon"><i class="fa-brands fa-github"></i></span>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://discord.com/users/1007074248621301880" target="_blank" rel="noopener" class="ha-outline">
+              <span class="ha-outline-icon"><i class="fa-brands fa-discord"></i></span>
+              <span>Discord</span>
+            </a>
+
+            <a href="https://www.youtube.com/@blxssvdd" target="_blank" rel="noopener" class="ha-outline">
+              <span class="ha-outline-icon"><i class="fa-brands fa-youtube"></i></span>
+              <span>YouTube</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="tech-pill"><i class="fa-brands fa-python" style="color: #4584b6;"></i> Python</span>
+            <span class="tech-pill"><i class="fa-solid fa-bolt" style="color: #05998b;"></i> FastAPI</span>
+            <span class="tech-pill"><i class="fa-solid fa-server" style="color: #0c4b33;"></i> Django</span>
+            <span class="tech-pill"><i class="fa-solid fa-database" style="color: #336791;"></i> PostgreSQL</span>
+            <span class="tech-pill"><i class="fa-brands fa-docker" style="color: #2496ed;"></i> Docker</span>
+          </div>
+        </div>
+
+        <!-- MOCKUP WINDOW (Architecture Showcase) -->
+        <div class="mockup-container">
+          <div class="mockup-window">
+            <div class="mockup-topbar">
+              <div class="mockup-dots">
+                <span class="mockup-dot red"></span>
+                <span class="mockup-dot yellow"></span>
+                <span class="mockup-dot green"></span>
+              </div>
+              <div class="mockup-path">
+                <i class="fa-regular fa-folder"></i>
+                <span>blessy-core :: architecture.py</span>
+              </div>
+              <div class="mockup-status">
+                <span class="pulse-dot"></span>
+                <span>Active 99.9%</span>
+              </div>
+            </div>
+
+            <div class="mockup-body">
+              <div class="mockup-sidebar">
+                <span class="mockup-section-label">Active Modules</span>
+                <div class="mockup-nav-item active">
+                  <span>Birthday Bot</span>
+                  <span class="mockup-badge">Aiogram</span>
+                </div>
+                <div class="mockup-nav-item">
+                  <span>Sukuna Discord</span>
+                  <span class="mockup-badge">discord.py</span>
+                </div>
+                <div class="mockup-nav-item">
+                  <span>Tournaments API</span>
+                  <span class="mockup-badge">FastAPI</span>
+                </div>
+                <div class="mockup-nav-item">
+                  <span>VPN Service</span>
+                  <span class="mockup-badge">Django</span>
+                </div>
+                <div class="mockup-nav-item">
+                  <span>BlessySaver</span>
+                  <span class="mockup-badge">Media Bot</span>
+                </div>
+              </div>
+
+              <div class="mockup-main">
+                <div class="mockup-code">
+                  <div class="code-line">
+                    <span class="code-num">1</span>
+                    <span><span class="kw">from</span> <span class="var">fastapi</span> <span class="kw">import</span> FastAPI, Depends</span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-num">2</span>
+                    <span><span class="kw">from</span> <span class="var">blessy.engine</span> <span class="kw">import</span> BotDispatcher, HighPerformanceRuntime</span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-num">3</span>
+                    <span></span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-num">4</span>
+                    <span><span class="var">app</span> = <span class="fn">FastAPI</span>(title=<span class="str">"blessy!! API Gateway"</span>, version=<span class="str">"2.0.0"</span>)</span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-num">5</span>
+                    <span></span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-num">6</span>
+                    <span><span class="var">@app.get</span>(<span class="str">"/status"</span>)</span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-num">7</span>
+                    <span><span class="kw">async def</span> <span class="fn">get_system_health</span>():</span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-num">8</span>
+                    <span>    <span class="comment"># Ultra-low latency response</span></span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-num">9</span>
+                    <span>    <span class="kw">return</span> {<span class="str">"status"</span>: <span class="str">"operational"</span>, <span class="str">"uptime"</span>: <span class="num">99.98</span>, <span class="str">"location"</span>: <span class="str">"Ukraine, Odesa"</span>}</span>
+                  </div>
+                </div>
+
+                <div class="mockup-mini-footer">
+                  <span>Runtime: Python 3.13 • AsyncIO Event Loop</span>
+                  <span class="stat-pill">● Latency: 18ms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO FEATURES SECTION -->
+    <section class="section" id="capabilities">
+      <div class="container">
+        <div class="section-head center">
+          <span class="section-tag"><span class="slash">/</span>capabilities</span>
+          <h2 class="section-title">Built for resilience and speed.</h2>
+          <p class="subtitle">A full spectrum of backend engineering, asynchronous Telegram bots, and scalable API services.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento Card 1: Backend Architecture -->
+          <div class="bento-card col-7">
+            <div>
+              <div class="bento-header">
+                <span class="bento-tag">CORE STACK</span>
+                <h3 class="bento-title">High-Throughput Python Architecture</h3>
+                <p class="bento-desc">Clean architecture utilizing FastAPI, Django, and SQLAlchemy. Structured for maximum database throughput, async queue workers, and maintainable codebase.</p>
+              </div>
+
+              <div class="pill-cloud">
+                <span class="tech-pill"><i class="fa-brands fa-python" style="color: #4584b6;"></i> Python</span>
+                <span class="tech-pill"><i class="fa-solid fa-bolt" style="color: #05998b;"></i> FastAPI</span>
+                <span class="tech-pill"><i class="fa-solid fa-server" style="color: #0c4b33;"></i> Django</span>
+                <span class="tech-pill"><i class="fa-solid fa-flask"></i> Flask</span>
+                <span class="tech-pill"><i class="fa-solid fa-database" style="color: #d71f00;"></i> SQLAlchemy</span>
+                <span class="tech-pill"><i class="fa-solid fa-database" style="color: #336791;"></i> PostgreSQL</span>
+                <span class="tech-pill"><i class="fa-solid fa-database" style="color: #00758f;"></i> MySQL</span>
+                <span class="tech-pill"><i class="fa-solid fa-table"></i> SQL</span>
+                <span class="tech-pill"><i class="fa-brands fa-node-js" style="color: #68a063;"></i> Node.js</span>
+              </div>
+              <div style="margin-top: 18px;">
+                <a href="about.html#stack" class="ha-outline" style="font-size: 0.8rem; display: inline-flex; padding: 6px 14px;">
+                  <span class="ha-outline-icon"><i class="fa-solid fa-layer-group"></i></span>
+                  <span>Explore Full 22-Tech Stack ✦</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bento-visual">
+              <div class="metric-row">
+                <span class="metric-name"><i class="fa-solid fa-server" style="color: var(--accent-blue)"></i> API Response Latency</span>
+                <span class="metric-val green">● 18ms Avg</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-name"><i class="fa-solid fa-database" style="color: var(--accent-blue)"></i> Connection Pool Health</span>
+                <span class="metric-val blue">● 100% Stable</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 2: Telegram & Discord Bots -->
+          <div class="bento-card bento-card-dark col-5">
+            <div>
+              <div class="bento-header">
+                <span class="bento-tag" style="background: rgba(151, 230, 255, 0.15); color: var(--accent-cyan);">TELEGRAM & DISCORD</span>
+                <h3 class="bento-title">Automated Bot Ecosystem</h3>
+                <p class="bento-desc">Production-grade bots powered by Aiogram 3.x and discord.py with rich interactive inline keyboards, state machines, and real-time alerts.</p>
+              </div>
+            </div>
+
+            <div class="bento-visual">
+              <div class="metric-row">
+                <span class="metric-name"><i class="fa-brands fa-telegram" style="color: var(--accent-cyan)"></i> Birthday Countdown Bot</span>
+                <span class="metric-val lime">Live</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-name"><i class="fa-brands fa-discord" style="color: #7289da"></i> Sukuna Multipurpose</span>
+                <span class="metric-val green">Online</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-name"><i class="fa-solid fa-download" style="color: var(--accent-cyan)"></i> BlessySaver Bot</span>
+                <span class="metric-val blue">Active</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 3: Creative & Music Inspiration -->
+          <div class="bento-card col-5">
+            <div>
+              <div class="bento-header">
+                <span class="bento-tag">INSPIRATION</span>
+                <h3 class="bento-title">Music, Anime & Quiet Nights</h3>
+                <p class="bento-desc">Fueling development marathons with the energy of Three Days Grace, Slipknot, and Limp Bizkit. Inspired by Rimuru Tempest and dark aesthetics.</p>
+              </div>
+
+              <div class="pill-cloud">
+                <span class="tech-pill">Rimuru Tempest 🩵</span>
+                <span class="tech-pill">Three Days Grace</span>
+                <span class="tech-pill">Slipknot</span>
+                <span class="tech-pill">Limp Bizkit</span>
+                <span class="tech-pill">Odesa, UA • +2 UTC</span>
+              </div>
+            </div>
+
+            <div class="bento-visual">
+              <a href="songs.html" class="ha-outline" style="width: 100%; justify-content: space-between;">
+                <span>Listen to Favourite Songs</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bento Card 4: Verified Code & Open Source -->
+          <div class="bento-card col-7">
+            <div>
+              <div class="bento-header">
+                <span class="bento-tag">OPEN SOURCE</span>
+                <h3 class="bento-title">Auditable, Documented Code</h3>
+                <p class="bento-desc">Every bot, API endpoint, and web application is built with clean Git commit history, clear structure, and public repository availability.</p>
+              </div>
+
+              <div class="metric-row">
+                <span class="metric-name"><i class="fa-brands fa-github"></i> blxssvdd / BirthdayTelegramBot</span>
+                <span class="metric-val green">Public</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-name"><i class="fa-brands fa-github"></i> blxssvdd / Tournaments-Manager-API</span>
+                <span class="metric-val green">FastAPI</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-name"><i class="fa-brands fa-github"></i> blxssvdd / Django-tournaments</span>
+                <span class="metric-val green">Django</span>
+              </div>
+            </div>
+
+            <div class="bento-visual">
+              <a href="https://github.com/blxssvdd" target="_blank" rel="noopener" class="btn" style="width: 100%;">
+                <i class="fa-brands fa-github"></i> Explore GitHub Profile
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS PREVIEW -->
+    <section class="section" id="projects-preview">
+      <div class="container">
+        <div class="section-head" style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span class="section-tag"><span class="slash">/</span>projects</span>
+            <h2 class="section-title">Selected Works</h2>
+            <p class="subtitle">Real-world applications and bots developed with precision.</p>
+          </div>
+          <a href="projects.html" class="ha-outline">
+            <span>View all projects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <img src="assets/projects/6f001dd1b731da6cbb0e60ca9ab3f8e5.jpg" alt="Birthday Telegram Bot" loading="lazy" decoding="async">
+              <span class="project-thumb-badge">Telegram Bot</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Birthday Telegram Bot</h3>
+                <p>A Telegram bot for identifying days until your birthday, with time zone support and a calendar UI.</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#Aiogram</span>
+                  <span>#UX/UI</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://t.me/BirthdayCountdownBot_bot" target="_blank" rel="noopener" class="btn">Launch Bot</a>
+                <a href="https://github.com/blxssvdd/BirthdayTelegramBot" target="_blank" rel="noopener" class="btn ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <img src="assets/projects/7fca8beb939628364cfc309f4ed6bb75.jpg" alt="Sukuna Discord Bot" loading="lazy" decoding="async">
+              <span class="project-thumb-badge">Discord Bot</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Sukuna Discord Bot</h3>
+                <p>Multipurpose Discord bot designed to bring community interactions, utility commands, and entertainment.</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#discord.py</span>
+                  <span>#Async</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://discord.com/oauth2/authorize?client_id=1094355452797669436" target="_blank" rel="noopener" class="btn">Invite Bot</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <img src="assets/projects/97c9f83452ddf48cc2b6cbcb9e840219.jpg" alt="Tournament Manager API" loading="lazy" decoding="async">
+              <span class="project-thumb-badge">FastAPI Backend</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Tournament Manager API</h3>
+                <p>High-speed tournament management system and RESTful service designed with FastAPI and asynchronous database pipelines.</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#FastAPI</span>
+                  <span>#Backend</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/blxssvdd/Tournaments-Manager-API" target="_blank" rel="noopener" class="btn ghost">View GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head center">
+          <span class="section-tag"><span class="slash">/</span>faq</span>
+          <h2 class="section-title">Common questions</h2>
+          <p class="subtitle">Quick answers about my stack, development approach, and background.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is your primary backend stack?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                My primary expertise centers around Python. I build services with FastAPI for high-performance async APIs, Django for structured web applications, and Flask for lightweight services. I use MySQL and SQLAlchemy for data modeling.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What kinds of bots do you develop?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                I specialize in both Telegram bots (using Aiogram 3.x) and Discord bots (using discord.py). From media downloaders (like BlessySaver) to complex utility systems (Birthday Countdown Bot, Sukuna Bot) with database persistence and interactive interfaces.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Where are you based and what is your availability?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                I am based in Ukraine, Odesa (UTC+2 timezone). I communicate fluently in Ukrainian, English, and Russian. I am open to discussing new bot projects, API integrations, and backend collaborations.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are all projects open-source on GitHub?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes! My major projects, including the Birthday Telegram Bot, Tournaments Manager API, VPN Service, and Python Games collection, are publicly hosted on GitHub at github.com/blxssvdd.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Start building the right way.</h2>
+          <p>Clean architecture, responsive bots, and rock-solid code. Available for backend projects and creative collaborations.</p>
+          <div class="ha-row" style="justify-content: center;">
+            <a href="https://github.com/blxssvdd" target="_blank" rel="noopener" class="ha-split">
+              <span class="ha-main"><span>Visit GitHub Profile</span></span>
+              <span class="ha-divider" aria-hidden="true"></span>
+              <span class="ha-caret" style="pointer-events: none;"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a href="https://discord.com/users/1007074248621301880" target="_blank" rel="noopener" class="ha-outline" style="background: rgba(255,255,255,0.08); color: #fff; border-color: rgba(255,255,255,0.2);">
+              <span class="ha-outline-icon"><i class="fa-brands fa-discord" style="color: #fff"></i></span>
+              <span>Connect on Discord</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-symbol">✦</span>
+            <span>blessy!!</span>
+          </a>
+          <p class="footer-bio">
+            Python developer from Ukraine, Odesa. Focused on backend systems, asynchronous bots, and clean software architecture.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="songs.html">Favourite Songs</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Projects</h4>
+          <ul class="footer-links">
+            <li><a href="https://t.me/BirthdayCountdownBot_bot" target="_blank" rel="noopener">Birthday Bot</a></li>
+            <li><a href="https://discord.com/oauth2/authorize?client_id=1094355452797669436" target="_blank" rel="noopener">Sukuna Bot</a></li>
+            <li><a href="https://github.com/blxssvdd/Tournaments-Manager-API" target="_blank" rel="noopener">Tournaments API</a></li>
+            <li><a href="https://t.me/blessysaver_bot" target="_blank" rel="noopener">BlessySaver Bot</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/blxssvdd" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            <li><a href="https://discord.com/users/1007074248621301880" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Discord</a></li>
+            <li><a href="https://www.youtube.com/@blxssvdd" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="nav-status">
+          <span class="pulse-dot"></span>
+          <span>All systems operational • Ukraine, Odesa</span>
+        </div>
+        <div class="footer-meta">
+          <span>© blessy!! • Python Developer & Architecture</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

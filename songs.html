@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/gallery/favicon.png">
+  <title>Favourite Songs • blessy!!</title>
+  <meta name="description" content="Favourite playlist and music player of blessy!! — Three Days Grace, Slipknot, Limp Bizkit, and chill vibes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="brand-symbol">✦</span>
+        <span>blessy!!</span>
+        <span class="brand-badge">Python</span>
+      </a>
+
+      <button class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">✦ Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projects.html">Projects</a></li>
+        <li><a class="nav-link active" href="songs.html">Fav. Songs</a></li>
+        <li><a class="nav-link" href="gallery.html">Photos</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="nav-status">
+          <span class="pulse-dot"></span>
+          <span>Music Player</span>
+        </div>
+        <a href="https://github.com/blxssvdd" target="_blank" rel="noopener" class="ha-outline" style="padding: 6px 12px; font-size: 0.85rem;">
+          <span class="ha-outline-icon"><i class="fa-brands fa-github"></i></span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag"><span class="slash">/</span>audio</span>
+          <h1 class="section-title">Favourite <span class="accent">Songs</span></h1>
+          <p class="subtitle">
+            A curated playlist that fuels my coding marathons and sets the rhythm for late-night architecture sessions.
+          </p>
+        </div>
+
+        <!-- Now Playing Banner -->
+        <div class="now-playing-banner">
+          <div class="now-playing-left">
+            <div class="now-playing-disc">
+              <div class="disc-center"></div>
+            </div>
+            <div class="now-playing-info">
+              <h4 class="now-playing-title">Ready to play</h4>
+              <p class="now-playing-artist">Select a track below</p>
+            </div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-headphones"></i>
+            <span>High-Bitrate Audio</span>
+          </div>
+        </div>
+
+        <section class="songs-category">
+          <div class="songs-category-head">
+            <h3 class="category-title">Energy Boost</h3>
+            <p class="category-note">Tracks that help you get into "always on top" mode and speed up coding marathons.</p>
+          </div>
+
+          <div class="tracks-grid">
+            <article class="track-card" data-track-src="assets/songs/03 Three Days Grace - Animal I Have Become.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b273fa4c18fdbd1bf1a39b7b794f');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">Animal I Have Become</h4>
+                  <p class="track-artist">Three Days Grace</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/Duality.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://artwork.anghcdn.co/webp/?id=49771583&size=320');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">Duality</h4>
+                  <p class="track-artist">Slipknot</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/06 Limp Bizkit - Rollin  (Air Raid Vehicle).mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b2734a31b146c7cf07705d912efe');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">Rollin</h4>
+                  <p class="track-artist">Limp Bizkit</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/01 DNCE - Kissing Strangers.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFKoHJ4obv_7nt4QDl21SXWaha7Gb6uLAINQ&s');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">KISSING STRANGERS</h4>
+                  <p class="track-artist">DNCE</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/JUMPING NIHILIST.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://i1.sndcdn.com/artworks-9Cht4J5RgBzzqbDX-ekpz5w-t500x500.png');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">JUMPING NIHILIST</h4>
+                  <p class="track-artist">HARDX</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/UMBRELLA - CARAMEL JESTER@uasaverbot.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/50/1d/97/501d973f-acd9-8a63-a68e-d0a831eb0daf/cover.jpg/600x600bf-60.jpg');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">CARAMEL JESTER</h4>
+                  <p class="track-artist">UMBRELLA</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="songs-category">
+          <div class="songs-category-head">
+            <h3 class="category-title">Night Coding</h3>
+            <p class="category-note">Nighttime playlists perfect for deep focus and atmospheric projects.</p>
+          </div>
+
+          <div class="tracks-grid">
+            <article class="track-card" data-track-src="assets/songs/KARTER DARK - NO REMORSE.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://cdn-images.dzcdn.net/images/cover/4d4f5dfab7874a42b3dfb8e931578eb8/0x1900-000000-80-0-0.jpg');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">NO REMORSE</h4>
+                  <p class="track-artist">KARTER DARK</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/WIV - home.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d00001e0267f152bd4446ab86fa41ba76');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">Home</h4>
+                  <p class="track-artist">WIV</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/WIV - i love u.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b27373321e5ebb4238a09204be34');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">i love you.</h4>
+                  <p class="track-artist">WIV</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/SpotiDownloader.com - Dark City - Max000.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/4f/76/0f/4f760fcb-b739-3a61-9736-c1b883483416/artwork.jpg/600x600bf-60.jpg');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">Dark City</h4>
+                  <p class="track-artist">MAX000</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/6 little eggs.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9c/30/1b/9c301bf5-df30-b848-c4b8-9dfca15aac83/5063112272678_Cover.jpg/600x600bf-60.jpg');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">6 little eggs</h4>
+                  <p class="track-artist">B3nte</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/LONOWN - starly (Slowed).mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://cdn-images.dzcdn.net/images/cover/ed477f0737ddc6881772336d962fcd34/0x1900-000000-80-0-0.jpg');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">starly (slowed)</h4>
+                  <p class="track-artist">LONOWN</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="songs-category">
+          <div class="songs-category-head">
+            <h3 class="category-title">Chill & Flow</h3>
+            <p class="category-note">Music for relaxed evenings when you want to breathe in the cosmos and slow down.</p>
+          </div>
+
+          <div class="tracks-grid">
+            <article class="track-card" data-track-src="assets/songs/Jane Remover - Dancing with your eyes closed.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b273ab0d83b752dcf9f2a7ddd51b');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">Dancing with your eyes closed</h4>
+                  <p class="track-artist">Jane Remover</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/Mitski - Washing Machine Heart.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://i1.sndcdn.com/artworks-fxdaQu510Tym6pLT-UiGczg-t500x500.jpg');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">Washing Machine Heart</h4>
+                  <p class="track-artist">Mitski</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/01 The Living Tombstone - My Ordinary Life.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://images.genius.com/54fa70e9c0a41d9531f5da6c0755fefc.1000x1000x1.png');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">My Ordinary Life</h4>
+                  <p class="track-artist">The Living Tombstone</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/Devi McCallion - I Want Things to Be Beautiful.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://f4.bcbits.com/img/a3733775472_16.jpg');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">I Want Things to Be Beautiful</h4>
+                  <p class="track-artist">Devi McCallion</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/NE CMOTRN.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://i.ytimg.com/vi/lYQwtKMhsEM/maxresdefault.jpg');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">NE CMOTRN</h4>
+                  <p class="track-artist">STAKILLAZ</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+            <article class="track-card" data-track-src="assets/songs/FACE - Антидепрессант.mp3">
+              <div class="track-card-main">
+                <div class="track-cover" style="--cover-image:url('https://i.scdn.co/image/ab67616d0000b2730c2220ba02bb0650b402d512');"></div>
+                <div class="track-meta">
+                  <h4 class="track-title">Антидепрессант</h4>
+                  <p class="track-artist">FACE</p>
+                </div>
+                <div class="track-controls">
+                  <button type="button" class="ctrl-btn prev-btn" aria-label="Предыдущий трек">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn play-btn" aria-label="Воспроизвести">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button type="button" class="ctrl-btn next-btn" aria-label="Следующий трек">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="track-progress-bar">
+                <span class="track-time time-current">0:00</span>
+                <input type="range" class="track-slider" min="0" max="100" value="0" aria-label="Позиция трека">
+                <span class="track-time time-duration">0:00</span>
+                <div class="volume-group">
+                  <i class="fa-solid fa-volume-low" style="font-size: 0.75rem; color: var(--text-muted)"></i>
+                  <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Громкость">
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-symbol">✦</span>
+            <span>blessy!!</span>
+          </a>
+          <p class="footer-bio">
+            Python developer from Ukraine, Odesa. Focused on backend systems, asynchronous bots, and clean software architecture.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="songs.html">Favourite Songs</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Projects</h4>
+          <ul class="footer-links">
+            <li><a href="https://t.me/BirthdayCountdownBot_bot" target="_blank" rel="noopener">Birthday Bot</a></li>
+            <li><a href="https://discord.com/oauth2/authorize?client_id=1094355452797669436" target="_blank" rel="noopener">Sukuna Bot</a></li>
+            <li><a href="https://github.com/blxssvdd/Tournaments-Manager-API" target="_blank" rel="noopener">Tournaments API</a></li>
+            <li><a href="https://t.me/blessysaver_bot" target="_blank" rel="noopener">BlessySaver Bot</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/blxssvdd" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            <li><a href="https://discord.com/users/1007074248621301880" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Discord</a></li>
+            <li><a href="https://www.youtube.com/@blxssvdd" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="nav-status">
+          <span class="pulse-dot"></span>
+          <span>All systems operational • Ukraine, Odesa</span>
+        </div>
+        <div class="footer-meta">
+          <span>© blessy!! • Python Developer & Architecture</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

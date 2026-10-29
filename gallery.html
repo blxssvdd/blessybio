@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/gallery/favicon.png">
+  <title>Gallery • blessy!!</title>
+  <meta name="description" content="Visual gallery of blessy!! — Rimuru Tempest arts, anime aesthetics, series, and life moments." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="brand-symbol">✦</span>
+        <span>blessy!!</span>
+        <span class="brand-badge">Python</span>
+      </a>
+
+      <button class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">✦ Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projects.html">Projects</a></li>
+        <li><a class="nav-link" href="songs.html">Fav. Songs</a></li>
+        <li><a class="nav-link active" href="gallery.html">Photos</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="nav-status">
+          <span class="pulse-dot"></span>
+          <span>Gallery</span>
+        </div>
+        <a href="https://github.com/blxssvdd" target="_blank" rel="noopener" class="ha-outline" style="padding: 6px 12px; font-size: 0.85rem;">
+          <span class="ha-outline-icon"><i class="fa-brands fa-github"></i></span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="photos-header">
+          <div>
+            <span class="section-tag"><span class="slash">/</span>visuals</span>
+            <h1 class="section-title">Photo <span class="accent">Gallery</span></h1>
+            <p class="subtitle">Artworks, anime inspirations, and life snippets that define my world.</p>
+          </div>
+
+          <div class="filters" role="tablist" aria-label="Фильтры галереи">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All (8)</button>
+            <button class="filter-btn" data-filter="rimuru" role="tab">Rimuru 🩵</button>
+            <button class="filter-btn" data-filter="anime" role="tab">Anime ✨</button>
+            <button class="filter-btn" data-filter="life" role="tab">Life 💾</button>
+            <button class="filter-btn" data-filter="series" role="tab">Series 🎬</button>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-item" data-category="life">
+            <img src="assets/gallery/photo_2026-01-26_11-42-27.jpg" alt="me?" loading="lazy" decoding="async">
+            <figcaption>Okay...</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="rimuru">
+            <img src="assets/gallery/8a649494739eb5373af82063baa88ef6.jpg" alt="Rimuru Tempest" loading="lazy" decoding="async">
+            <figcaption>My love — Rimuru Tempest</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="anime">
+            <img src="assets/gallery/a253b371860efce85112eec42f8dfc34.jpg" alt="Anime is my life" loading="lazy" decoding="async">
+            <figcaption>Hellsing — a great anime. Especially Alucard.</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="series">
+            <img src="assets/gallery/1e646d51483b773335c4b72541b5df2a.jpg" alt="Dexter" loading="lazy" decoding="async">
+            <figcaption>Dexter. Brian Moser</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="series">
+            <img src="assets/gallery/6a49d17ef998209f99c84935dcfb1270.jpg" alt="Brian Moser" loading="lazy" decoding="async">
+            <figcaption>Brian Moser.</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="rimuru">
+            <img src="assets/gallery/fe0d0fea83dce094dd1573bf72e47ff5.jpg" alt="Rimuru Tempest" loading="lazy" decoding="async">
+            <figcaption>Beautiful art featuring Rimuru Tempest</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="rimuru">
+            <img src="assets/gallery/94d133b1123334506193a74283335c44.jpg" alt="Rimuru Tempest" loading="lazy" decoding="async">
+            <figcaption>Another art with Rimuru</figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="anime">
+            <img src="assets/gallery/4b2e0b032e435b8a6a7016eb48ed11ed.jpg" alt="Death Note" loading="lazy" decoding="async">
+            <figcaption>Death Note...</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Viewer -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Просмотр фотографии">
+    <button class="lb-close" aria-label="Закрыть просмотр"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lb-prev" aria-label="Предыдущее фото"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lb-next" aria-label="Следующее фото"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lb-stage">
+      <img class="lb-img" src="" alt="Enlarged photo">
+      <div class="lb-info">
+        <div class="lb-counter"></div>
+        <div class="lb-caption"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-symbol">✦</span>
+            <span>blessy!!</span>
+          </a>
+          <p class="footer-bio">
+            Python developer from Ukraine, Odesa. Focused on backend systems, asynchronous bots, and clean software architecture.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="songs.html">Favourite Songs</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Projects</h4>
+          <ul class="footer-links">
+            <li><a href="https://t.me/BirthdayCountdownBot_bot" target="_blank" rel="noopener">Birthday Bot</a></li>
+            <li><a href="https://discord.com/oauth2/authorize?client_id=1094355452797669436" target="_blank" rel="noopener">Sukuna Bot</a></li>
+            <li><a href="https://github.com/blxssvdd/Tournaments-Manager-API" target="_blank" rel="noopener">Tournaments API</a></li>
+            <li><a href="https://t.me/blessysaver_bot" target="_blank" rel="noopener">BlessySaver Bot</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/blxssvdd" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            <li><a href="https://discord.com/users/1007074248621301880" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Discord</a></li>
+            <li><a href="https://www.youtube.com/@blxssvdd" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="nav-status">
+          <span class="pulse-dot"></span>
+          <span>All systems operational • Ukraine, Odesa</span>
+        </div>
+        <div class="footer-meta">
+          <span>© blessy!! • Python Developer & Architecture</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/gallery/favicon.png">
+  <title>Projects • blessy!! — Python Developer</title>
+  <meta name="description" content="Portfolio of applications, bots, and backend APIs by blessy!!." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="brand-symbol">✦</span>
+        <span>blessy!!</span>
+        <span class="brand-badge">Python</span>
+      </a>
+
+      <button class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">✦ Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link active" href="projects.html">Projects</a></li>
+        <li><a class="nav-link" href="songs.html">Fav. Songs</a></li>
+        <li><a class="nav-link" href="gallery.html">Photos</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="nav-status">
+          <span class="pulse-dot"></span>
+          <span>Available</span>
+        </div>
+        <a href="https://github.com/blxssvdd" target="_blank" rel="noopener" class="ha-outline" style="padding: 6px 12px; font-size: 0.85rem;">
+          <span class="ha-outline-icon"><i class="fa-brands fa-github"></i></span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head" style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <span class="section-tag"><span class="slash">/</span>catalog</span>
+            <h1 class="section-title">My <span class="accent">Projects</span></h1>
+            <p class="subtitle">
+              Here are my projects that were written with love from the bottom of my heart 🩵
+            </p>
+          </div>
+
+          <!-- Project Filter Pills -->
+          <div class="filters" role="tablist" aria-label="Фильтры проектов">
+            <button class="filter-btn active" data-project-filter="all">All (7)</button>
+            <button class="filter-btn" data-project-filter="bots">Bots</button>
+            <button class="filter-btn" data-project-filter="backend">Backend & API</button>
+            <button class="filter-btn" data-project-filter="web">Web & Django</button>
+            <button class="filter-btn" data-project-filter="games">Games</button>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Birthday Telegram Bot -->
+          <article class="project-card" data-category="bots">
+            <div class="project-thumb">
+              <img src="assets/projects/6f001dd1b731da6cbb0e60ca9ab3f8e5.jpg" alt="Birthday Telegram Bot" loading="lazy" decoding="async">
+              <span class="project-thumb-badge"><i class="fa-brands fa-telegram"></i> Telegram Bot</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Birthday Telegram Bot</h3>
+                <p>A Telegram bot for identifying days until your birthday, with time zone support and a beautiful calendar!</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#Aiogram</span>
+                  <span>#UX/UI</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://t.me/BirthdayCountdownBot_bot" target="_blank" rel="noopener" class="btn">View Project</a>
+                <a href="https://github.com/blxssvdd/BirthdayTelegramBot" target="_blank" rel="noopener" class="btn ghost">View GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Sukuna Discord Bot -->
+          <article class="project-card" data-category="bots">
+            <div class="project-thumb">
+              <img src="assets/projects/7fca8beb939628364cfc309f4ed6bb75.jpg" alt="Sukuna Discord Bot" loading="lazy" decoding="async">
+              <span class="project-thumb-badge"><i class="fa-brands fa-discord"></i> Discord Bot</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Sukuna Discord Bot</h3>
+                <p>Is a multipurpose Discord bot designed to bring fun, interaction, and useful utilities to your community.</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#discord.py</span>
+                  <span>#UX/UI</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://discord.com/oauth2/authorize?client_id=1094355452797669436" target="_blank" rel="noopener" class="btn">View Project</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Tournament Manager API -->
+          <article class="project-card" data-category="backend">
+            <div class="project-thumb">
+              <img src="assets/projects/97c9f83452ddf48cc2b6cbcb9e840219.jpg" alt="Tournament Manager API" loading="lazy" decoding="async">
+              <span class="project-thumb-badge"><i class="fa-solid fa-bolt"></i> FastAPI</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Tournament Manager API</h3>
+                <p>Project for a tournament management system built with FastAPI, async route handlers, and data models.</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#FastAPI</span>
+                  <span>#Backend</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/blxssvdd/Tournaments-Manager-API" target="_blank" rel="noopener" class="btn ghost">View GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: BlessySaver Telegram Bot -->
+          <article class="project-card" data-category="bots">
+            <div class="project-thumb">
+              <img src="assets/gallery/7bc909906d4fe27fcc4d8630520d0bb5.jpg" alt="BlessySaver Bot" loading="lazy" decoding="async">
+              <span class="project-thumb-badge"><i class="fa-brands fa-telegram"></i> Media Bot</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>BlessySaver Telegram Bot</h3>
+                <p>YouTube / TikTok / SoundCloud Downloader Bot with streaming media pipeline and high-speed delivery.</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#Aiogram</span>
+                  <span>#TelegramBot</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://t.me/blessysaver_bot" target="_blank" rel="noopener" class="btn">View Project</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: VPN SERVICE -->
+          <article class="project-card" data-category="web">
+            <div class="project-thumb">
+              <img src="assets/gallery/zyro-image.png" alt="VPN Service" loading="lazy" decoding="async">
+              <span class="project-thumb-badge"><i class="fa-solid fa-shield"></i> Django Web</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>VPN SERVICE</h3>
+                <p>A Django-based web application for managing VPN subscriptions and services. Educational architecture project.</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#Django</span>
+                  <span>#Faker</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/blxssvdd/VPN_Service" target="_blank" rel="noopener" class="btn ghost">View GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Python Games -->
+          <article class="project-card" data-category="games">
+            <div class="project-thumb">
+              <img src="assets/gallery/00b44edc08d0ff6b1b61052ccb6389c1.jpg" alt="Python Games" loading="lazy" decoding="async">
+              <span class="project-thumb-badge"><i class="fa-solid fa-gamepad"></i> Game Dev</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Python Games</h3>
+                <p>A collection of classic arcade and puzzle games implemented in Python with custom game loops.</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#pygame</span>
+                  <span>#Tkinter</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/blxssvdd/Games-In-Python" target="_blank" rel="noopener" class="btn ghost">View GitHub</a>
+                <a href="https://youtu.be/9-qsEyuDYRE" target="_blank" rel="noopener" class="btn ghost">View Video</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: Tournament Arena -->
+          <article class="project-card" data-category="web">
+            <div class="project-thumb">
+              <img src="assets/gallery/00b44edc08d0ff6b1b61052ccb6389c1.jpg" alt="Tournament Arena" loading="lazy" decoding="async">
+              <span class="project-thumb-badge"><i class="fa-solid fa-trophy"></i> Django Platform</span>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Tournament Arena</h3>
+                <p>Tournament Arena is a Django web application for organizing tournaments, teams, and player rosters with social auth.</p>
+                <div class="tags">
+                  <span>#Python</span>
+                  <span>#Django</span>
+                  <span>#Tournaments</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/blxssvdd/Django-tournaments" target="_blank" rel="noopener" class="btn ghost">View GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-symbol">✦</span>
+            <span>blessy!!</span>
+          </a>
+          <p class="footer-bio">
+            Python developer from Ukraine, Odesa. Focused on backend systems, asynchronous bots, and clean software architecture.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="songs.html">Favourite Songs</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Projects</h4>
+          <ul class="footer-links">
+            <li><a href="https://t.me/BirthdayCountdownBot_bot" target="_blank" rel="noopener">Birthday Bot</a></li>
+            <li><a href="https://discord.com/oauth2/authorize?client_id=1094355452797669436" target="_blank" rel="noopener">Sukuna Bot</a></li>
+            <li><a href="https://github.com/blxssvdd/Tournaments-Manager-API" target="_blank" rel="noopener">Tournaments API</a></li>
+            <li><a href="https://t.me/blessysaver_bot" target="_blank" rel="noopener">BlessySaver Bot</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/blxssvdd" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            <li><a href="https://discord.com/users/1007074248621301880" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Discord</a></li>
+            <li><a href="https://www.youtube.com/@blxssvdd" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="nav-status">
+          <span class="pulse-dot"></span>
+          <span>All systems operational • Ukraine, Odesa</span>
+        </div>
+        <div class="footer-meta">
+          <span>© blessy!! • Python Developer & Architecture</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
