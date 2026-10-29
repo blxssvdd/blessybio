@@ -1087,7 +1087,7 @@ body.scrolled .site-header {
   gap: 24px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -1418,13 +1418,14 @@ body.scrolled .site-header {
   gap: 16px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .tracks-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 .track-card {
+  min-width: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -1454,6 +1455,7 @@ body.scrolled .site-header {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
 }
 
 .track-cover {
@@ -1533,10 +1535,12 @@ body.scrolled .site-header {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
 }
 
 .track-slider {
   flex-grow: 1;
+  min-width: 0;
   -webkit-appearance: none;
   appearance: none;
   height: 5px;
@@ -2067,6 +2071,129 @@ body.scrolled .site-header {
 .toast-msg.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   Mobile Ergonomics & Responsive Tuning
+   ========================================================================== */
+@media (max-width: 860px) {
+  .burger {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .filter-btn {
+    padding: 8px 14px;
+    min-height: 38px;
+  }
+  .mockup-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--surface-dark-border);
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .now-playing-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+  .now-playing-left {
+    width: 100%;
+    gap: 12px;
+  }
+  .now-playing-info {
+    min-width: 0;
+    flex: 1;
+  }
+  .now-playing-title, .now-playing-artist {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bento-card {
+    padding: 20px 18px;
+    border-radius: var(--radius-md);
+  }
+  .faq-question {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+  .faq-answer-inner {
+    padding: 0 16px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-card {
+    padding: 12px 14px;
+  }
+  .track-card-main {
+    gap: 10px;
+    min-width: 0;
+  }
+  .track-cover {
+    width: 46px;
+    height: 46px;
+  }
+  .track-title {
+    font-size: 0.9rem;
+  }
+  .track-artist {
+    font-size: 0.78rem;
+  }
+  .track-controls {
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .ctrl-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+  .ctrl-btn.play-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+  .track-progress-bar {
+    gap: 8px;
+    min-width: 0;
+  }
+  .track-progress-bar .volume-group {
+    display: none;
+  }
+  .mockup-topbar {
+    padding: 10px 14px;
+  }
+  .mockup-path {
+    max-width: 130px;
+    overflow: hidden;
+  }
+  .mockup-path span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .mockup-status {
+    display: none;
+  }
+  .mockup-main {
+    padding: 16px;
+  }
+  .mockup-code {
+    font-size: 0.8rem;
+  }
 }
 
 /* Reduced Motion */
