@@ -344,12 +344,14 @@ function init2DFallback(canvas) {
       e.stopPropagation();
       const isOpen = menu.classList.toggle('open');
       caret.classList.toggle('active', isOpen);
+      parent.classList.toggle('is-open', isOpen);
     });
 
     document.addEventListener('click', (e) => {
       if (!parent.contains(e.target)) {
         menu.classList.remove('open');
         caret.classList.remove('active');
+        parent.classList.remove('is-open');
       }
     });
   });
